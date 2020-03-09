@@ -16,7 +16,7 @@ let provider = MoyaProvider<APITarget>( endpointClosure: { (target) -> Endpoint 
         task: target.task,
         httpHeaderFields: target.headers)
     
-}, plugins: [NetworkLoggerPlugin(verbose: false)])
+}, plugins: [NetworkLoggerPlugin(verbose: true)])
 
 enum APITarget{
     case characters

@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 
 def defaultPods 
-  use_frameworks!
+  #use_frameworks!
   inhibit_all_warnings!
   pod 'RxSwift'
   pod 'RxCocoa'
@@ -12,7 +12,7 @@ def defaultPods
 end
 
 def testPods
-  use_frameworks!
+ # use_frameworks!
   inhibit_all_warnings!
  pod 'Quick'
  pod 'Nimble'

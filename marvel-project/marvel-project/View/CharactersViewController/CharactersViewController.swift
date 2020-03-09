@@ -21,8 +21,9 @@ class CharactersViewController: BaseViewController<CharactersView> {
     
     private var disposeBag: DisposeBag!
     private let fetch = CharactersProvider()
+    var viewModel: [CharactersViewModel] = []
     var charactersResponse: Request<[CharactersModel]> = .none {
-        didSet { reloadStack() }
+        didSet { reloadData() }
     }
     
     required init() {
@@ -51,15 +52,49 @@ class CharactersViewController: BaseViewController<CharactersView> {
                 switch event {
                 case .success(let response):
                     self.charactersResponse = .success([response])
-                // self.fetching = false
                 case .error(let error):
                     self.charactersResponse = .failure(error.localizedDescription)
-                    // self.fetching = false
                 }
         }.disposed(by: disposeBag)
     }
     
-    func reloadStack() {
-        
+    func reloadData() {
+        switch charactersResponse {
+        case .none:
+            return
+        case .loading:
+            return
+        case .success(let response):
+            let viewModel = FillViewModel().wrapToViewModel(model: response[0])
+            self.viewModel = viewModel
+        case .failure(let error):
+            alert(message: error)
+        }
+    }
+    
+    func alert(message: String) {
+         let alert = UIAlertController(title: "Alert", message: "Error: \(message)",
+             preferredStyle: UIAlertController.Style.alert)
+         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+         self.present(alert, animated: true, completion: nil)
+     }
+}
+
+extension CharactersViewController:  UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = customView.collectionView.dequeueReusableCell(withReuseIdentifier: "CharactersCell", for: indexPath) as? CharactersCell else {
+            return UICollectionViewCell()
+        }
+        cell.fillCell(data: viewModel[indexPath.row])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+          // self.navigateTo(id: movies[indexPath.row].id)
+        print("Selecionado")
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class CharactersView: NibView {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     required init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
 
@@ -20,3 +22,4 @@ class CharactersView: NibView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
