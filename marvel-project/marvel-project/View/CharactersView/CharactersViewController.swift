@@ -17,8 +17,9 @@ enum Request<T> {
     case failure(String)
 }
 
-class CharactersViewController: BaseViewController<CharactersView> {
+class CharactersViewController: BaseViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     private var disposeBag: DisposeBag!
     private let fetch = CharactersProvider()
     var viewModel: [CharactersViewModel] = []
@@ -86,7 +87,7 @@ extension CharactersViewController:  UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = customView.collectionView.dequeueReusableCell(withReuseIdentifier: "CharactersCell", for: indexPath) as? CharactersCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharactersCell", for: indexPath) as? CharactersCell else {
             return UICollectionViewCell()
         }
         cell.fillCell(data: viewModel[indexPath.row])
@@ -94,6 +95,9 @@ extension CharactersViewController:  UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let navigation = self.navigationController else { return }
+        let coordinator = CharacterDetailCoordinator(with: navigation, id: viewModel[indexPath.row].id)
+        coordinator.start(presentation: .push(animated: true))
           // self.navigateTo(id: movies[indexPath.row].id)
         print("Selecionado")
     }

@@ -8,15 +8,15 @@
 
 import UIKit
 
-class BaseViewController <CustomView: UIView>: UIViewController {
+class BaseViewController: UIViewController {
     
-    var customView: CustomView {
+    /*var customView: CustomView {
         guard let view = view as? CustomView else { return CustomView()}
         return view
     }
     
     override func loadView() {
         view = CustomView()
-    }
+    }*/
     
 }

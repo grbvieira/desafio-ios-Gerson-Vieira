@@ -19,16 +19,18 @@
 		757701B024142573003DA971 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701AF24142573003DA971 /* Coordinator.swift */; };
 		757701B224142590003DA971 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701B124142590003DA971 /* AppCoordinator.swift */; };
 		757701B8241426D9003DA971 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701B7241426D9003DA971 /* CharactersViewController.swift */; };
-		757701BA241426ED003DA971 /* CharactersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757701B9241426ED003DA971 /* CharactersView.xib */; };
+		757701BA241426ED003DA971 /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757701B9241426ED003DA971 /* CharactersViewController.xib */; };
 		757701BD24147755003DA971 /* NibView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701BC24147755003DA971 /* NibView+UIView.swift */; };
 		757701C02414786E003DA971 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701BF2414786E003DA971 /* BaseViewController.swift */; };
 		757701C424147952003DA971 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701C324147952003DA971 /* CharactersModel.swift */; };
 		757701C724147BE2003DA971 /* CharactersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701C624147BE2003DA971 /* CharactersProvider.swift */; };
 		757701CA24147C62003DA971 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701C924147C62003DA971 /* CharactersCoordinator.swift */; };
-		757701CC24148749003DA971 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701CB24148749003DA971 /* CharactersView.swift */; };
 		757701CE2415BE83003DA971 /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701CD2415BE83003DA971 /* CharactersCell.swift */; };
 		757701D02415BEAA003DA971 /* CharactersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757701CF2415BEAA003DA971 /* CharactersCell.xib */; };
 		757701D32415C110003DA971 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701D22415C110003DA971 /* CharactersViewModel.swift */; };
+		757701D62415C773003DA971 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701D52415C773003DA971 /* CharacterDetailViewController.swift */; };
+		757701DA2415C798003DA971 /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757701D92415C798003DA971 /* CharacterDetailCoordinator.swift */; };
+		757701DC2415C838003DA971 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757701DB2415C838003DA971 /* CharacterDetailViewController.xib */; };
 		AEBB29B3243117D44AAADE56 /* libPods-marvel-projectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 932605209612197CA1177930 /* libPods-marvel-projectTests.a */; };
 /* End PBXBuildFile section */
 
@@ -61,16 +63,18 @@
 		757701AF24142573003DA971 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		757701B124142590003DA971 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		757701B7241426D9003DA971 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
-		757701B9241426ED003DA971 /* CharactersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersView.xib; sourceTree = "<group>"; };
+		757701B9241426ED003DA971 /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
 		757701BC24147755003DA971 /* NibView+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NibView+UIView.swift"; sourceTree = "<group>"; };
 		757701BF2414786E003DA971 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		757701C324147952003DA971 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
 		757701C624147BE2003DA971 /* CharactersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProvider.swift; sourceTree = "<group>"; };
 		757701C924147C62003DA971 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
-		757701CB24148749003DA971 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		757701CD2415BE83003DA971 /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
 		757701CF2415BEAA003DA971 /* CharactersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCell.xib; sourceTree = "<group>"; };
 		757701D22415C110003DA971 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		757701D52415C773003DA971 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		757701D92415C798003DA971 /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
+		757701DB2415C838003DA971 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		932605209612197CA1177930 /* libPods-marvel-projectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marvel-projectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DEC43B95BF595B1C07F2B8 /* Pods-marvel-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-project.debug.xcconfig"; path = "Target Support Files/Pods-marvel-project/Pods-marvel-project.debug.xcconfig"; sourceTree = "<group>"; };
 		FB204DA86730F1488BF8362C /* Pods-marvel-projectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-projectTests.debug.xcconfig"; path = "Target Support Files/Pods-marvel-projectTests/Pods-marvel-projectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,19 +187,21 @@
 		757701B524142614003DA971 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				757701B62414262B003DA971 /* CharactersViewController */,
+				757701D42415C75A003DA971 /* CharacterDetailView */,
+				757701B62414262B003DA971 /* CharactersView */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		757701B62414262B003DA971 /* CharactersViewController */ = {
+		757701B62414262B003DA971 /* CharactersView */ = {
 			isa = PBXGroup;
 			children = (
 				757701C824147C4C003DA971 /* Coordinator */,
 				757701C124147872003DA971 /* View */,
+				757701B9241426ED003DA971 /* CharactersViewController.xib */,
 				757701B7241426D9003DA971 /* CharactersViewController.swift */,
 			);
-			path = CharactersViewController;
+			path = CharactersView;
 			sourceTree = "<group>";
 		};
 		757701BB2414773B003DA971 /* Extension */ = {
@@ -217,8 +223,6 @@
 		757701C124147872003DA971 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				757701B9241426ED003DA971 /* CharactersView.xib */,
-				757701CB24148749003DA971 /* CharactersView.swift */,
 				757701CF2415BEAA003DA971 /* CharactersCell.xib */,
 				757701CD2415BE83003DA971 /* CharactersCell.swift */,
 			);
@@ -255,6 +259,32 @@
 				757701D22415C110003DA971 /* CharactersViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		757701D42415C75A003DA971 /* CharacterDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				757701D72415C778003DA971 /* Coordinator */,
+				757701D82415C77F003DA971 /* View */,
+				757701DB2415C838003DA971 /* CharacterDetailViewController.xib */,
+				757701D52415C773003DA971 /* CharacterDetailViewController.swift */,
+			);
+			path = CharacterDetailView;
+			sourceTree = "<group>";
+		};
+		757701D72415C778003DA971 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				757701D92415C798003DA971 /* CharacterDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		757701D82415C77F003DA971 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AFB87CE19C21CF778BD36860 /* Pods */ = {
@@ -360,11 +390,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757701BA241426ED003DA971 /* CharactersView.xib in Resources */,
+				757701BA241426ED003DA971 /* CharactersViewController.xib in Resources */,
 				75770190240F3461003DA971 /* LaunchScreen.storyboard in Resources */,
 				757701D02415BEAA003DA971 /* CharactersCell.xib in Resources */,
 				7577018D240F3461003DA971 /* Assets.xcassets in Resources */,
 				7577018B240F345D003DA971 /* Main.storyboard in Resources */,
+				757701DC2415C838003DA971 /* CharacterDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,10 +461,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				757701B8241426D9003DA971 /* CharactersViewController.swift in Sources */,
+				757701DA2415C798003DA971 /* CharacterDetailCoordinator.swift in Sources */,
 				757701AD240F480F003DA971 /* ApiTargert.swift in Sources */,
 				757701AB240F4802003DA971 /* TargetType.swift in Sources */,
 				75770188240F345D003DA971 /* ViewController.swift in Sources */,
 				757701CE2415BE83003DA971 /* CharactersCell.swift in Sources */,
+				757701D62415C773003DA971 /* CharacterDetailViewController.swift in Sources */,
 				75770184240F345D003DA971 /* AppDelegate.swift in Sources */,
 				757701C02414786E003DA971 /* BaseViewController.swift in Sources */,
 				757701BD24147755003DA971 /* NibView+UIView.swift in Sources */,
@@ -442,7 +475,6 @@
 				757701C424147952003DA971 /* CharactersModel.swift in Sources */,
 				757701C724147BE2003DA971 /* CharactersProvider.swift in Sources */,
 				757701B024142573003DA971 /* Coordinator.swift in Sources */,
-				757701CC24148749003DA971 /* CharactersView.swift in Sources */,
 				757701CA24147C62003DA971 /* CharactersCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
