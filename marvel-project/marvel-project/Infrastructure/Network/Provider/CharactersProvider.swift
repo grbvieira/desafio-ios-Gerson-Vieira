@@ -11,13 +11,13 @@ import Moya
 import RxSwift
 
 protocol APIProtocol {
-    func resquestCharacters() -> Single<CharactersModel>
+    func resquestCharacters(offSet: Int) -> Single<CharactersModel>
 }
 class CharactersProvider: APIProtocol {
     
-    func resquestCharacters() -> Single<CharactersModel> {
+    func resquestCharacters(offSet: Int) -> Single<CharactersModel> {
         return provider.rx
-            .request(.characters)
+            .request(.characters(offSet: offSet))
             .map {
                 let response = try JSONDecoder().decode(CharactersModel.self, from: $0.data)
                 return response

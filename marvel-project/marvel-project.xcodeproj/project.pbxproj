@@ -187,13 +187,13 @@
 		757701B524142614003DA971 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				757701D42415C75A003DA971 /* CharacterDetailView */,
-				757701B62414262B003DA971 /* CharactersView */,
+				757701D42415C75A003DA971 /* CharacterDetailViewController */,
+				757701B62414262B003DA971 /* CharactersViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		757701B62414262B003DA971 /* CharactersView */ = {
+		757701B62414262B003DA971 /* CharactersViewController */ = {
 			isa = PBXGroup;
 			children = (
 				757701C824147C4C003DA971 /* Coordinator */,
@@ -201,7 +201,7 @@
 				757701B9241426ED003DA971 /* CharactersViewController.xib */,
 				757701B7241426D9003DA971 /* CharactersViewController.swift */,
 			);
-			path = CharactersView;
+			path = CharactersViewController;
 			sourceTree = "<group>";
 		};
 		757701BB2414773B003DA971 /* Extension */ = {
@@ -261,7 +261,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		757701D42415C75A003DA971 /* CharacterDetailView */ = {
+		757701D42415C75A003DA971 /* CharacterDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
 				757701D72415C778003DA971 /* Coordinator */,
@@ -269,7 +269,7 @@
 				757701DB2415C838003DA971 /* CharacterDetailViewController.xib */,
 				757701D52415C773003DA971 /* CharacterDetailViewController.swift */,
 			);
-			path = CharacterDetailView;
+			path = CharacterDetailViewController;
 			sourceTree = "<group>";
 		};
 		757701D72415C778003DA971 /* Coordinator */ = {

@@ -16,10 +16,10 @@ let provider = MoyaProvider<APITarget>( endpointClosure: { (target) -> Endpoint 
         task: target.task,
         httpHeaderFields: target.headers)
     
-}, plugins: [NetworkLoggerPlugin(verbose: true)])
+}, plugins: [NetworkLoggerPlugin(verbose: false)])
 
 enum APITarget{
-    case characters
+    case characters(offSet: Int)
     case charactersDetail(id: Int)
     case comics(id: Int)///v1/public/characters/{characterId}/comics
 }
@@ -47,11 +47,13 @@ extension APITarget: TargetType {
     
     var task: Task {
         switch self {
-        case .characters:
+        case .characters(let offSet):
             var parameters: [String: Any] = [:]
             parameters[Keys.ts.rawValue] = Values.ts.rawValue
             parameters[Keys.apikey.rawValue] = Values.apikey.rawValue
             parameters[Keys.hash.rawValue] = Values.hash.rawValue
+            parameters[Keys.orderBy.rawValue] = Values.orderByName.rawValue
+            parameters[Keys.offset.rawValue] = offSet
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .charactersDetail:
             var parameters: [String: Any] = [:]

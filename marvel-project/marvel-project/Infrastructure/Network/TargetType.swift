@@ -21,13 +21,16 @@ enum Paths: String {
 enum Keys: String {
     case ts
     case apikey
-    case hash 
+    case hash
+    case orderBy
+    case offset
 }
 
 enum Values: String {
     case ts = "thesoer"
     case apikey = "b924601c14e330943c296e3f9a7df782"
     case hash = "9a1235588e7edc9f7aa1b9f040c4b71c"
+    case orderByName = "name"
 }
 
 extension TargetType {
@@ -41,6 +44,6 @@ extension TargetType {
     }
     
     public var headers: [String : String]? {
-        return ["":""]
+        return ["content-type": "application/json"]
     }
 }

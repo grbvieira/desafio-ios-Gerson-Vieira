@@ -11,11 +11,12 @@ import Kingfisher
 
 class CharactersCell: UICollectionViewCell {
     
-    @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    
     
     func fillCell(data: CharactersViewModel) {
-        self.photo.kf.setImage(with: data.thumbnail)
-        self.name.text = data.name
+        self.thumbnail.kf.setImage(with: data.thumbnail)
+        self.nameLbl.text = data.name
     }
 }
