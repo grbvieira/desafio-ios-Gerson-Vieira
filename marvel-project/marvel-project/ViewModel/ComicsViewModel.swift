@@ -28,4 +28,11 @@ class ComicsViewModel {
         let url = URL(string: str)
         return url!
     }
+    
+    var issue: String {
+        guard let issue = entry?.issueNumber else
+        { return String() }
+        let srt = "Issue #\(issue)"
+        return srt
+    }
 }
