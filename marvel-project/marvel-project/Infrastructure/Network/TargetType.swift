@@ -8,11 +8,6 @@
 
 import Moya
 
-enum Paths: String {
-    case characters = "/v1/public/characters"
-    case comics = "/v1/public/characters/{characterId}/comics"
-}
-
 //enum ApiKey: String {
 //    case publicKey = "b924601c14e330943c296e3f9a7df782"
 //    case privateKey = "d7e39f6c60883f576dcd1f62f9e5da65b0800b02"

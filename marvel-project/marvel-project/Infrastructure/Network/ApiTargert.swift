@@ -29,13 +29,19 @@ extension APITarget: TargetType {
     var path: String {
         switch  self {
         case .characters:
-            return Paths.characters.rawValue
+            return "/v1/public/characters"
         case .charactersDetail(let id):
-            return Paths.characters.rawValue + String(id)
+            return "/v1/public/characters" + String(id)
         case .comics(let id):
-            return Paths.comics.rawValue + String(id)
+            return"/v1/public/characters/\(id)/comics"
         }
     }
+    /*
+     enum Paths: String {
+         case characters = "/v1/public/characters"
+         case comics = "/v1/public/characters/{characterId}/comics"
+     }
+     */
     
     var method: Method {
         switch self {

@@ -6,23 +6,15 @@
 //  Copyright © 2020 Gerson Vieira. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
-
-enum Request<T> {
-    case none
-    case loading
-    case success(T)
-    case failure(String)
-}
 
 class CharactersViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     private var refreshControl:UIRefreshControl!
     private var disposeBag: DisposeBag!
-    private let fetch = CharactersProvider()
+    private let fetch = MarvelProjectProvider()
     var viewModel: [CharactersViewModel] = []
     var charactersResponse: Request<[CharactersModel]> = .none {
         didSet { reloadData() }
@@ -70,7 +62,7 @@ class CharactersViewController: BaseViewController {
         case .loading:
             return
         case .success(let response):
-            let viewModel = FillViewModel().wrapToViewModel(model: response[0])
+            let viewModel = FillViewModel().wrapToCharactersViewModel(model: response[0])
             self.viewModel.append(contentsOf: viewModel)
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
@@ -112,8 +104,8 @@ extension CharactersViewController:  UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let navigation = self.navigationController else { return }
-        let coordinator = CharacterDetailCoordinator(with: navigation, id: viewModel[indexPath.row].id)
-        // coordinator.start(presentation: .push(animated: true))
+        let coordinator = CharacterDetailCoordinator(with: navigation, viewModel: viewModel[indexPath.row])
+        coordinator.start(presentation: .push(animated: true))
     }
 }
 

@@ -1,21 +1,21 @@
 //
-//  CharacterDetailCoordinator.swift
+//  ComicsCoordinator.swift
 //  marvel-project
 //
-//  Created by Gerson Vieira on 08/03/20.
+//  Created by Gerson Vieira on 09/03/20.
 //  Copyright © 2020 Gerson Vieira. All rights reserved.
 //
 
 import UIKit
 
-class CharacterDetailCoordinator: Coordinator {
+class ComicsCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigation: UINavigationController
     let controller: UIViewController
     
-    init(with navigation: UINavigationController, viewModel: CharactersViewModel) {
+    init(with navigation: UINavigationController, id: Int) {
         self.navigation = navigation
-        self.controller = CharacterDetailViewController(data: viewModel)
+        self.controller = ComicsViewController(id: id)
     }
     
     func start(presentation: Presentation) {

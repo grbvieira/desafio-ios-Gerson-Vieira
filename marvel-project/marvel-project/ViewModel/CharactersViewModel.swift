@@ -26,25 +26,16 @@ class CharactersViewModel {
         return name
     }
     
+    var description: String {
+        let description = entry?.resultDescription ?? String()
+        return description
+    }
+    
     var thumbnail: URL {
         let path = entry?.thumbnail?.path ?? String()
         let exten = entry?.thumbnail?.thumbnailExtension?.rawValue ?? String()
         let str = "\(path).\(exten)"
         let url = URL(string: str)
         return url!
-    }
-}
-
-class FillViewModel {
-    func wrapToViewModel(model: CharactersModel) -> [CharactersViewModel] {
-        var characters = [CharactersViewModel]()
-        guard let items = model.data?.results else {
-            return characters
-        }
-        for item in items {
-            let viewModel = CharactersViewModel(entry: item)
-            characters.append(viewModel)
-        }
-        return characters
     }
 }
