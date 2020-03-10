@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		59A6D2EA94B3E4E567F7197B /* libPods-marvel-project.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0946A22816F54384AA7A7F96 /* libPods-marvel-project.a */; };
-		7524BA182417CF2500DD5AF5 /* sf-ui-display-bold-58646a511e3d9.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA102417CF2400DD5AF5 /* sf-ui-display-bold-58646a511e3d9.otf */; };
-		7524BA192417CF2500DD5AF5 /* sf-ui-display-semibold-58646eddcae92.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold-58646eddcae92.otf */; };
-		7524BA1A2417CF2500DD5AF5 /* sf-ui-display-thin-58646e9b26e8b.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA122417CF2400DD5AF5 /* sf-ui-display-thin-58646e9b26e8b.otf */; };
-		7524BA1B2417CF2500DD5AF5 /* sf-ui-display-medium-58646be638f96.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA132417CF2400DD5AF5 /* sf-ui-display-medium-58646be638f96.otf */; };
-		7524BA1C2417CF2500DD5AF5 /* sf-ui-display-light-58646b33e0551.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA142417CF2400DD5AF5 /* sf-ui-display-light-58646b33e0551.otf */; };
-		7524BA1D2417CF2500DD5AF5 /* sf-ui-display-heavy-586470160b9e5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy-586470160b9e5.otf */; };
-		7524BA1E2417CF2500DD5AF5 /* sf-ui-display-black-58646a6b80d5a.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA162417CF2400DD5AF5 /* sf-ui-display-black-58646a6b80d5a.otf */; };
-		7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight-58646b19bf205.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight-58646b19bf205.otf */; };
+		7524BA182417CF2500DD5AF5 /* sf-ui-display-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA102417CF2400DD5AF5 /* sf-ui-display-bold.otf */; };
+		7524BA192417CF2500DD5AF5 /* sf-ui-display-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold.otf */; };
+		7524BA1A2417CF2500DD5AF5 /* sf-ui-display-thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA122417CF2400DD5AF5 /* sf-ui-display-thin.otf */; };
+		7524BA1B2417CF2500DD5AF5 /* sf-ui-display-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA132417CF2400DD5AF5 /* sf-ui-display-medium.otf */; };
+		7524BA1C2417CF2500DD5AF5 /* sf-ui-display-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA142417CF2400DD5AF5 /* sf-ui-display-light.otf */; };
+		7524BA1D2417CF2500DD5AF5 /* sf-ui-display-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy.otf */; };
+		7524BA1E2417CF2500DD5AF5 /* sf-ui-display-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA162417CF2400DD5AF5 /* sf-ui-display-black.otf */; };
+		7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight.otf */; };
 		75770184240F345D003DA971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770183240F345D003DA971 /* AppDelegate.swift */; };
 		75770188240F345D003DA971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770187240F345D003DA971 /* ViewController.swift */; };
 		7577018B240F345D003DA971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75770189240F345D003DA971 /* Main.storyboard */; };
@@ -64,14 +64,14 @@
 		0946A22816F54384AA7A7F96 /* libPods-marvel-project.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-marvel-project.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A616459B9CE571E4EEB1932 /* Pods-marvel-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-project.release.xcconfig"; path = "Target Support Files/Pods-marvel-project/Pods-marvel-project.release.xcconfig"; sourceTree = "<group>"; };
 		3992EE696ABF6B30C5CB9ABF /* Pods-marvel-projectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel-projectTests.release.xcconfig"; path = "Target Support Files/Pods-marvel-projectTests/Pods-marvel-projectTests.release.xcconfig"; sourceTree = "<group>"; };
-		7524BA102417CF2400DD5AF5 /* sf-ui-display-bold-58646a511e3d9.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-bold-58646a511e3d9.otf"; sourceTree = "<group>"; };
-		7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold-58646eddcae92.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-semibold-58646eddcae92.otf"; sourceTree = "<group>"; };
-		7524BA122417CF2400DD5AF5 /* sf-ui-display-thin-58646e9b26e8b.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-thin-58646e9b26e8b.otf"; sourceTree = "<group>"; };
-		7524BA132417CF2400DD5AF5 /* sf-ui-display-medium-58646be638f96.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-medium-58646be638f96.otf"; sourceTree = "<group>"; };
-		7524BA142417CF2400DD5AF5 /* sf-ui-display-light-58646b33e0551.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-light-58646b33e0551.otf"; sourceTree = "<group>"; };
-		7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy-586470160b9e5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy-586470160b9e5.otf"; sourceTree = "<group>"; };
-		7524BA162417CF2400DD5AF5 /* sf-ui-display-black-58646a6b80d5a.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black-58646a6b80d5a.otf"; sourceTree = "<group>"; };
-		7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight-58646b19bf205.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-ultralight-58646b19bf205.otf"; sourceTree = "<group>"; };
+		7524BA102417CF2400DD5AF5 /* sf-ui-display-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-bold.otf"; sourceTree = "<group>"; };
+		7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-semibold.otf"; sourceTree = "<group>"; };
+		7524BA122417CF2400DD5AF5 /* sf-ui-display-thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-thin.otf"; sourceTree = "<group>"; };
+		7524BA132417CF2400DD5AF5 /* sf-ui-display-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-medium.otf"; sourceTree = "<group>"; };
+		7524BA142417CF2400DD5AF5 /* sf-ui-display-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-light.otf"; sourceTree = "<group>"; };
+		7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy.otf"; sourceTree = "<group>"; };
+		7524BA162417CF2400DD5AF5 /* sf-ui-display-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black.otf"; sourceTree = "<group>"; };
+		7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-ultralight.otf"; sourceTree = "<group>"; };
 		75770180240F345D003DA971 /* marvel-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75770183240F345D003DA971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75770187240F345D003DA971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,14 +135,14 @@
 		7524BA0F2417CEFE00DD5AF5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				7524BA162417CF2400DD5AF5 /* sf-ui-display-black-58646a6b80d5a.otf */,
-				7524BA102417CF2400DD5AF5 /* sf-ui-display-bold-58646a511e3d9.otf */,
-				7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy-586470160b9e5.otf */,
-				7524BA142417CF2400DD5AF5 /* sf-ui-display-light-58646b33e0551.otf */,
-				7524BA132417CF2400DD5AF5 /* sf-ui-display-medium-58646be638f96.otf */,
-				7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold-58646eddcae92.otf */,
-				7524BA122417CF2400DD5AF5 /* sf-ui-display-thin-58646e9b26e8b.otf */,
-				7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight-58646b19bf205.otf */,
+				7524BA162417CF2400DD5AF5 /* sf-ui-display-black.otf */,
+				7524BA102417CF2400DD5AF5 /* sf-ui-display-bold.otf */,
+				7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy.otf */,
+				7524BA142417CF2400DD5AF5 /* sf-ui-display-light.otf */,
+				7524BA132417CF2400DD5AF5 /* sf-ui-display-medium.otf */,
+				7524BA112417CF2400DD5AF5 /* sf-ui-display-semibold.otf */,
+				7524BA122417CF2400DD5AF5 /* sf-ui-display-thin.otf */,
+				7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -463,19 +463,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				757701BA241426ED003DA971 /* CharactersViewController.xib in Resources */,
-				7524BA1B2417CF2500DD5AF5 /* sf-ui-display-medium-58646be638f96.otf in Resources */,
+				7524BA1B2417CF2500DD5AF5 /* sf-ui-display-medium.otf in Resources */,
 				75770190240F3461003DA971 /* LaunchScreen.storyboard in Resources */,
 				757701E2241718CD003DA971 /* ComicsViewController.xib in Resources */,
-				7524BA1C2417CF2500DD5AF5 /* sf-ui-display-light-58646b33e0551.otf in Resources */,
+				7524BA1C2417CF2500DD5AF5 /* sf-ui-display-light.otf in Resources */,
 				757701D02415BEAA003DA971 /* CharactersCell.xib in Resources */,
-				7524BA1E2417CF2500DD5AF5 /* sf-ui-display-black-58646a6b80d5a.otf in Resources */,
-				7524BA1D2417CF2500DD5AF5 /* sf-ui-display-heavy-586470160b9e5.otf in Resources */,
+				7524BA1E2417CF2500DD5AF5 /* sf-ui-display-black.otf in Resources */,
+				7524BA1D2417CF2500DD5AF5 /* sf-ui-display-heavy.otf in Resources */,
 				7577018D240F3461003DA971 /* Assets.xcassets in Resources */,
-				7524BA182417CF2500DD5AF5 /* sf-ui-display-bold-58646a511e3d9.otf in Resources */,
-				7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight-58646b19bf205.otf in Resources */,
+				7524BA182417CF2500DD5AF5 /* sf-ui-display-bold.otf in Resources */,
+				7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight.otf in Resources */,
 				7577018B240F345D003DA971 /* Main.storyboard in Resources */,
-				7524BA192417CF2500DD5AF5 /* sf-ui-display-semibold-58646eddcae92.otf in Resources */,
-				7524BA1A2417CF2500DD5AF5 /* sf-ui-display-thin-58646e9b26e8b.otf in Resources */,
+				7524BA192417CF2500DD5AF5 /* sf-ui-display-semibold.otf in Resources */,
+				7524BA1A2417CF2500DD5AF5 /* sf-ui-display-thin.otf in Resources */,
 				757701ED24171A8F003DA971 /* ComicsCell.xib in Resources */,
 				757701DC2415C838003DA971 /* CharacterDetailViewController.xib in Resources */,
 			);
