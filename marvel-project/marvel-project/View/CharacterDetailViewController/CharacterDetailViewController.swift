@@ -11,6 +11,9 @@ import Kingfisher
 
 enum OptionsEnum {
     case comics
+    case detail
+    case wiki
+    case comiclink
 }
 protocol CharacterDetailDelegate {
     func navigateTo(type: OptionsEnum)
@@ -86,6 +89,7 @@ class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate
         case .comics:
             let coordinator = ComicsCoordinator(with: navigation, id: data.id)
             coordinator.start(presentation: .push(animated: true))
+        case .detail, .wiki, .comiclink: return
         }
     }
 }

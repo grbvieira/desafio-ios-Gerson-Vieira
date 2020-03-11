@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct urlOptions {
+    var type: URLType
+    var url: URL
+}
 class CharactersViewModel {
     
     private var entry: Result?
@@ -38,4 +42,18 @@ class CharactersViewModel {
         let url = URL(string: str)
         return url!
     }
+    
+    var url: [urlOptions]?{
+        var options: [urlOptions]?
+        guard let urls = entry?.urls else { return nil }
+        
+        for item in urls {
+            let str = item.url ?? String()
+            let optionsAux = urlOptions(type: item.type!, url: URL(string: str)!)
+            options?.append(optionsAux)
+        }
+        return options
+    }
+    
+    
 }

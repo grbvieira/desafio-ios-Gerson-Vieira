@@ -19,7 +19,17 @@ class OptionsView: NibView {
         option = type
         switch type {
         case .comics:
-            optionLabel.setTitle("Comics", for: UIControl.State.normal)
+            optionLabel.setTitle("Comics", for: .normal)
+            optionLabel.setTitleColor(UIColor.black, for: .normal)
+        case .detail:
+            optionLabel.setTitle("Detail", for: .normal)
+            optionLabel.setTitleColor(UIColor.link, for: .normal)
+        case .wiki:
+            optionLabel.setTitle("Wiki", for: .normal)
+            optionLabel.setTitleColor(UIColor.link, for: .normal)
+        case .comiclink:
+            optionLabel.setTitle("Comic Link", for: .normal)
+            optionLabel.setTitleColor(UIColor.link, for: .normal)
         }
     }
     
