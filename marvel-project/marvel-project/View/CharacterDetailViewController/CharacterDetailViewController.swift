@@ -16,7 +16,7 @@ enum OptionsEnum {
     case comiclink
 }
 protocol CharacterDetailDelegate {
-    func navigateTo(type: OptionsEnum)
+    func navigateTo(type: OptionsEnum, data: urlOptions?)
 }
 
 class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate {
@@ -57,7 +57,19 @@ class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate
         if data.description != String() {
             setDetailView()
         }
-        setOptions(type: .comics)
+        setOptions(type: .comics, data: nil)
+        
+        guard let ulrs = data.url else { return }
+        for item in ulrs {
+            switch item.type {
+            case .wiki:
+                setOptions(type: .wiki, data: item)
+            case .comiclink:
+                setOptions(type: .comiclink, data: item)
+            case .detail:
+                setOptions(type: .detail, data: item)
+            }
+        }
     }
     
     func setHeaderView() {
@@ -74,8 +86,8 @@ class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate
         mainStack.addArrangedSubview(detailView)
     }
     
-    func setOptions(type: OptionsEnum) {
-        let optionsView = OptionsView(with: type)
+    func setOptions(type: OptionsEnum, data: urlOptions?) {
+        let optionsView = OptionsView(with: type, data: data)
         optionsView.delegate = self
         optionsView.translatesAutoresizingMaskIntoConstraints = false
         optionsView.heightAnchor.constraint(equalToConstant: 107).isActive = true
@@ -83,13 +95,24 @@ class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate
         
     }
     
-    func navigateTo(type: OptionsEnum) {
+    func navigateTo(type: OptionsEnum, data: urlOptions?) {
         guard let navigation = self.navigationController else { return }
         switch type {
         case .comics:
-            let coordinator = ComicsCoordinator(with: navigation, id: data.id)
+            let coordinator = ComicsCoordinator(with: navigation, id: self.data.id)
             coordinator.start(presentation: .push(animated: true))
-        case .detail, .wiki, .comiclink: return
+        case .detail:
+            guard let data = data else { return }
+            let coordinator = WebViewOptionCoordinator(with: navigation, option: data)
+            coordinator.start(presentation: .push(animated: true))
+        case .wiki:
+            guard let data = data else { return }
+            let coordinator = WebViewOptionCoordinator(with: navigation, option: data)
+            coordinator.start(presentation: .push(animated: true))
+        case .comiclink:
+            guard let data = data else { return }
+            let coordinator = WebViewOptionCoordinator(with: navigation, option: data)
+            coordinator.start(presentation: .push(animated: true))
         }
     }
 }

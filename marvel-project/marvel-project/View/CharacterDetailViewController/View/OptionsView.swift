@@ -13,10 +13,12 @@ class OptionsView: NibView {
     @IBOutlet weak var optionLabel: UIButton!
     var delegate: CharacterDetailDelegate?
     var option: OptionsEnum = .comics
+    var data: urlOptions?
     
-    required init(with type: OptionsEnum) {
+    required init(with type: OptionsEnum, data: urlOptions?) {
         super.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        option = type
+        self.option = type
+        self.data = data
         switch type {
         case .comics:
             optionLabel.setTitle("Comics", for: .normal)
@@ -39,7 +41,7 @@ class OptionsView: NibView {
     }
     
     @IBAction func choiceAction(_ sender: Any) {
-        delegate?.navigateTo(type: option)
+        delegate?.navigateTo(type: option, data: data)
     }
 }
 

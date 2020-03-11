@@ -44,13 +44,13 @@ class CharactersViewModel {
     }
     
     var url: [urlOptions]?{
-        var options: [urlOptions]?
+        var options: [urlOptions] = []
         guard let urls = entry?.urls else { return nil }
         
         for item in urls {
             let str = item.url ?? String()
             let optionsAux = urlOptions(type: item.type!, url: URL(string: str)!)
-            options?.append(optionsAux)
+            options.append(optionsAux)
         }
         return options
     }
