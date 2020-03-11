@@ -35,8 +35,6 @@ class ComicsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tableView.rowHeight = UITableView.automaticDimension;
-//        self.tableView.estimatedRowHeight = 108.0;
         registerCell()
         fechComics()
     }
@@ -135,3 +133,4 @@ extension ComicsViewController {
         }
     }
 }
+

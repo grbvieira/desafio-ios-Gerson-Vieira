@@ -7,64 +7,67 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "20F488E3-1A41-4C76-AEB3-CBC053AF89C1"
+            uuid = "29FB88E3-D422-4E83-9BDB-016CDA3C1BCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marvel-project/ViewModel/ComicsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "onsaleDate"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "A63D17CD-CA8D-42C3-BBEF-4D81605CC3D4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "marvel-project/View/ComicsViewController/ComicsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "fechComics()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "20F488E3-1A41-4C76-AEB3-CBC053AF89C1 - e09ce7651d6f5b39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (RxSwift.SingleEvent&lt;marvel_project.ComicsModel&gt;) -&gt; () in marvel_project.ComicsViewController.fechComics() -&gt; ()"
-                  moduleName = "marvel-project"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gersonr/Desktop/desafio-ios-Gerson-Vieira/marvel-project/marvel-project/View/ComicsViewController/ComicsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "344">
-               </Location>
-               <Location
-                  uuid = "20F488E3-1A41-4C76-AEB3-CBC053AF89C1 - e09ce7651d6f5b39"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (RxSwift.SingleEvent&lt;marvel_project.ComicsModel&gt;) -&gt; () in marvel_project.ComicsViewController.fechComics() -&gt; ()"
-                  moduleName = "marvel-project"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gersonr/Desktop/desafio-ios-Gerson-Vieira/marvel-project/marvel-project/View/ComicsViewController/ComicsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "412">
-               </Location>
-            </Locations>
+            scope = "1"
+            stopOnStyle = "0">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po $arg1">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "373D223A-51C4-4EC0-8CF5-29FEB394DBAC"
+            uuid = "028C05DF-85F8-4FEB-BE05-CA9E7E679AD5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "marvel-project/View/ComicsViewController/ComicsViewController.swift"
+            filePath = "marvel-project/Infrastructure/Extension/NibView+UIView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "fechComics()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loadNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29C2DB9D-200C-4D97-928F-F38C2B8A8B87"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marvel-project/Infrastructure/Extension/NibView+UIView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loadNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

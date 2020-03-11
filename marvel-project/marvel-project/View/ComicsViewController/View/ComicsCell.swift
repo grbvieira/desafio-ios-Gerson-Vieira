@@ -14,10 +14,12 @@ class ComicsCell: UITableViewCell {
     @IBOutlet weak var thumbComic: UIImageView!
     @IBOutlet weak var nameComic: UILabel!
     @IBOutlet weak var issueComic: UILabel!
+    @IBOutlet weak var onSaleDate: UILabel!
     
     func setup(data: ComicsViewModel) {
         self.thumbComic.kf.setImage(with: data.thumbnail)
         self.nameComic.text = data.title
         self.issueComic.text = data.issue
+        self.onSaleDate.text = data.onsaleDate
     }
 }

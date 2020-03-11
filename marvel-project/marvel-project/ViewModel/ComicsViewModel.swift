@@ -35,4 +35,10 @@ class ComicsViewModel {
         let srt = "Issue #\(issue)"
         return srt
     }
+    
+    var onsaleDate: String {
+        let date = entry?.dates![0].date ?? String()
+        let str = "sale date: " + date.formatDate()
+        return str
+    }
 }

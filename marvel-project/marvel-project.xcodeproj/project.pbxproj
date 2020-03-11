@@ -16,6 +16,13 @@
 		7524BA1D2417CF2500DD5AF5 /* sf-ui-display-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy.otf */; };
 		7524BA1E2417CF2500DD5AF5 /* sf-ui-display-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA162417CF2400DD5AF5 /* sf-ui-display-black.otf */; };
 		7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight.otf */; };
+		7524BA222417E4D800DD5AF5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA212417E4D800DD5AF5 /* DateFormatter.swift */; };
+		7524BA272418114400DD5AF5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA262418114400DD5AF5 /* HeaderView.swift */; };
+		7524BA292418115C00DD5AF5 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA282418115C00DD5AF5 /* DetailsView.swift */; };
+		7524BA2B2418116C00DD5AF5 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA2A2418116C00DD5AF5 /* OptionsView.swift */; };
+		7524BA2D2418118900DD5AF5 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA2C2418118900DD5AF5 /* HeaderView.xib */; };
+		7524BA2F2418119900DD5AF5 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA2E2418119900DD5AF5 /* DetailsView.xib */; };
+		7524BA31241811A900DD5AF5 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA30241811A900DD5AF5 /* OptionsView.xib */; };
 		75770184240F345D003DA971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770183240F345D003DA971 /* AppDelegate.swift */; };
 		75770188240F345D003DA971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770187240F345D003DA971 /* ViewController.swift */; };
 		7577018B240F345D003DA971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75770189240F345D003DA971 /* Main.storyboard */; };
@@ -72,6 +79,13 @@
 		7524BA152417CF2400DD5AF5 /* sf-ui-display-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy.otf"; sourceTree = "<group>"; };
 		7524BA162417CF2400DD5AF5 /* sf-ui-display-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black.otf"; sourceTree = "<group>"; };
 		7524BA172417CF2500DD5AF5 /* sf-ui-display-ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-ultralight.otf"; sourceTree = "<group>"; };
+		7524BA212417E4D800DD5AF5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7524BA262418114400DD5AF5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		7524BA282418115C00DD5AF5 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		7524BA2A2418116C00DD5AF5 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		7524BA2C2418118900DD5AF5 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		7524BA2E2418119900DD5AF5 /* DetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		7524BA30241811A900DD5AF5 /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
 		75770180240F345D003DA971 /* marvel-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75770183240F345D003DA971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75770187240F345D003DA971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +161,27 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		7524BA202417E4C600DD5AF5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7524BA212417E4D800DD5AF5 /* DateFormatter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7524BA252418113700DD5AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7524BA2C2418118900DD5AF5 /* HeaderView.xib */,
+				7524BA262418114400DD5AF5 /* HeaderView.swift */,
+				7524BA2E2418119900DD5AF5 /* DetailsView.xib */,
+				7524BA282418115C00DD5AF5 /* DetailsView.swift */,
+				7524BA30241811A900DD5AF5 /* OptionsView.xib */,
+				7524BA2A2418116C00DD5AF5 /* OptionsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		75770177240F345D003DA971 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +225,7 @@
 		757701A5240F3469003DA971 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				7524BA202417E4C600DD5AF5 /* Helper */,
 				757701AE24142557003DA971 /* Coordinator */,
 				757701BE24147852003DA971 /* Core */,
 				757701BB2414773B003DA971 /* Extension */,
@@ -316,6 +352,7 @@
 		757701D42415C75A003DA971 /* CharacterDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7524BA252418113700DD5AF5 /* View */,
 				757701D72415C778003DA971 /* Coordinator */,
 				757701DB2415C838003DA971 /* CharacterDetailViewController.xib */,
 				757701D52415C773003DA971 /* CharacterDetailViewController.swift */,
@@ -474,9 +511,12 @@
 				7524BA182417CF2500DD5AF5 /* sf-ui-display-bold.otf in Resources */,
 				7524BA1F2417CF2500DD5AF5 /* sf-ui-display-ultralight.otf in Resources */,
 				7577018B240F345D003DA971 /* Main.storyboard in Resources */,
+				7524BA2D2418118900DD5AF5 /* HeaderView.xib in Resources */,
 				7524BA192417CF2500DD5AF5 /* sf-ui-display-semibold.otf in Resources */,
 				7524BA1A2417CF2500DD5AF5 /* sf-ui-display-thin.otf in Resources */,
 				757701ED24171A8F003DA971 /* ComicsCell.xib in Resources */,
+				7524BA31241811A900DD5AF5 /* OptionsView.xib in Resources */,
+				7524BA2F2418119900DD5AF5 /* DetailsView.xib in Resources */,
 				757701DC2415C838003DA971 /* CharacterDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7524BA2B2418116C00DD5AF5 /* OptionsView.swift in Sources */,
 				757701B8241426D9003DA971 /* CharactersViewController.swift in Sources */,
 				757701DA2415C798003DA971 /* CharacterDetailCoordinator.swift in Sources */,
 				757701AD240F480F003DA971 /* ApiTargert.swift in Sources */,
@@ -549,8 +590,11 @@
 				75770188240F345D003DA971 /* ViewController.swift in Sources */,
 				757701E4241718E8003DA971 /* ComicsViewController.swift in Sources */,
 				757701E82417197C003DA971 /* ComicsCoordinator.swift in Sources */,
+				7524BA272418114400DD5AF5 /* HeaderView.swift in Sources */,
+				7524BA222417E4D800DD5AF5 /* DateFormatter.swift in Sources */,
 				757701CE2415BE83003DA971 /* CharactersCell.swift in Sources */,
 				757701D62415C773003DA971 /* CharacterDetailViewController.swift in Sources */,
+				7524BA292418115C00DD5AF5 /* DetailsView.swift in Sources */,
 				757701EB24171A84003DA971 /* ComicsCell.swift in Sources */,
 				75770184240F345D003DA971 /* AppDelegate.swift in Sources */,
 				757701C02414786E003DA971 /* BaseViewController.swift in Sources */,
