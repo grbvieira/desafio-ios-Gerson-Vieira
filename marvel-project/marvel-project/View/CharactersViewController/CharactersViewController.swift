@@ -84,7 +84,7 @@ class CharactersViewController: BaseViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func registerNibFiles(){
+     func registerNibFiles(){
         let cell = UINib(nibName: "CharactersCell", bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: "charactersCell")
     }

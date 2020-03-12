@@ -19,7 +19,7 @@ class ComicsViewControllerSpec: QuickSpec {
             context("Success request"){
                 beforeEach {
                     response = Mock().getMockComics()
-                    controller.loadViewIfNeeded()
+                    controller.tableView.layoutIfNeeded()
                     controller.comicsResponse = .success([response!])
                 }
                 
@@ -40,8 +40,8 @@ class ComicsViewControllerSpec: QuickSpec {
             context("Faile request"){
                 beforeEach {
                     controller.viewModel = []
-                    controller.loadViewIfNeeded()
-                    controller.reloadData()
+                    controller.tableView.layoutIfNeeded()
+                    controller.tableView.reloadData()
                     controller.comicsResponse = .failure("Erro generico")
                 }
                 
