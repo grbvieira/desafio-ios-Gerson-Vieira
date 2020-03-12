@@ -1,4 +1,4 @@
-module Pods_marvel_project {
+framework module Pods_marvel_project {
   umbrella header "Pods-marvel-project-umbrella.h"
 
   export *
