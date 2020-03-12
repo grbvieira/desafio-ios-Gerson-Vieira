@@ -19,6 +19,7 @@ class ComicsViewControllerSpec: QuickSpec {
             context("Success request"){
                 beforeEach {
                     response = Mock().getMockComics()
+                    controller.loadViewIfNeeded()
                     controller.comicsResponse = .success([response!])
                 }
                 
@@ -27,7 +28,7 @@ class ComicsViewControllerSpec: QuickSpec {
                 }
                 
                 it("Should be equal 20") {
-                    expect(controller.tableView.numberOfRows(inSection: 0)).to(equal(30))
+                    expect(controller.tableView.numberOfRows(inSection: 0)).to(equal(20))
                 }
                 
                 it("Should be equal ComicsCell") {
@@ -39,6 +40,7 @@ class ComicsViewControllerSpec: QuickSpec {
             context("Faile request"){
                 beforeEach {
                     controller.viewModel = []
+                    controller.loadViewIfNeeded()
                     controller.reloadData()
                     controller.comicsResponse = .failure("Erro generico")
                 }
