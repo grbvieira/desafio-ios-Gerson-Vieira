@@ -15,9 +15,16 @@ class ComicsCell: UITableViewCell {
     @IBOutlet weak var nameComic: UILabel!
     @IBOutlet weak var issueComic: UILabel!
     @IBOutlet weak var onSaleDate: UILabel!
+    let processor = RoundCornerImageProcessor(cornerRadius: 20)
     
     func setup(data: ComicsViewModel) {
-        self.thumbComic.kf.setImage(with: data.thumbnail)
+        self.thumbComic.kf.setImage(with: data.thumbnail,
+                                    options: [
+                                        .processor(processor),
+                                        .scaleFactor(UIScreen.main.scale),
+                                        .transition(.fade(1)),
+                                        .cacheOriginalImage
+        ])
         self.nameComic.text = data.title
         self.issueComic.text = data.issue
         self.onSaleDate.text = data.onsaleDate

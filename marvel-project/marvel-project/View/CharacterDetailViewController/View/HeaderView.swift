@@ -17,7 +17,12 @@ class HeaderView: NibView {
     
     required init(with data: CharactersViewModel) {
         super.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        thumImage.kf.setImage(with: data.thumbnail)
+        thumImage.kf.setImage(with: data.thumbnail,
+                                        options: [
+                                            .scaleFactor(UIScreen.main.scale),
+                                            .transition(.fade(1)),
+                                            .cacheOriginalImage
+            ])
         nameLabel.text = data.name
         issueLabel.text = String(data.id)
     }
