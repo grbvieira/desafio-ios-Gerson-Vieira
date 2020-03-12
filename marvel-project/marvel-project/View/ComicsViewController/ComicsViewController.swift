@@ -57,7 +57,7 @@ class ComicsViewController: BaseViewController {
                 switch event {
                 case .success(let response):
                     self.isLoading = false
-                    if (response.data?.results!.isEmpty)! {
+                    if (response.data?.results!.isEmpty)! && self.viewModel.isEmpty {
                         self.comicsResponse = .failure("Não há HQ's para este personagem")
                     }
                     self.comicsResponse = .success([response])
