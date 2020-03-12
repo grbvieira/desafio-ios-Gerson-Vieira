@@ -21,7 +21,7 @@ let provider = MoyaProvider<APITarget>( endpointClosure: { (target) -> Endpoint 
 enum APITarget{
     case characters(offSet: Int)
     case charactersDetail(id: Int)
-    case comics(id: Int)///v1/public/characters/{characterId}/comics
+    case comics(id: Int, offSet: Int)
 }
 
 extension APITarget: TargetType {
@@ -33,15 +33,9 @@ extension APITarget: TargetType {
         case .charactersDetail(let id):
             return "/v1/public/characters" + String(id)
         case .comics(let id):
-            return"/v1/public/characters/\(id)/comics"
+            return"/v1/public/characters/\(id.id)/comics"
         }
     }
-    /*
-     enum Paths: String {
-         case characters = "/v1/public/characters"
-         case comics = "/v1/public/characters/{characterId}/comics"
-     }
-     */
     
     var method: Method {
         switch self {
@@ -67,11 +61,12 @@ extension APITarget: TargetType {
             parameters[Keys.apikey.rawValue] = Values.apikey.rawValue
             parameters[Keys.hash.rawValue] = Values.hash.rawValue
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .comics:
+        case .comics(let offSet):
             var parameters: [String: Any] = [:]
             parameters[Keys.ts.rawValue] = Values.ts.rawValue
             parameters[Keys.apikey.rawValue] = Values.apikey.rawValue
             parameters[Keys.hash.rawValue] = Values.hash.rawValue
+            parameters[Keys.offset.rawValue] = offSet.offSet
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }

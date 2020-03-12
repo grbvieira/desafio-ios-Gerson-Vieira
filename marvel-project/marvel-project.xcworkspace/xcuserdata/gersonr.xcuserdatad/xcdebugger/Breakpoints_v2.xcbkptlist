@@ -23,5 +23,68 @@
             </Actions>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA331589-3496-4B38-B6EC-EF8052AF91C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "marvel-project/View/ComicsViewController/ComicsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fechComics()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FA331589-3496-4B38-B6EC-EF8052AF91C4 - e09ce7651d6f5b39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.SingleEvent&lt;marvel_project.ComicsModel&gt;) -&gt; () in marvel_project.ComicsViewController.fechComics() -&gt; ()"
+                  moduleName = "marvel-project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gersonr/Desktop/desafio-ios-Gerson-Vieira/marvel-project/marvel-project/View/ComicsViewController/ComicsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "287">
+               </Location>
+               <Location
+                  uuid = "FA331589-3496-4B38-B6EC-EF8052AF91C4 - e09ce7651d6f5b39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.SingleEvent&lt;marvel_project.ComicsModel&gt;) -&gt; () in marvel_project.ComicsViewController.fechComics() -&gt; ()"
+                  moduleName = "marvel-project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gersonr/Desktop/desafio-ios-Gerson-Vieira/marvel-project/marvel-project/View/ComicsViewController/ComicsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "326">
+               </Location>
+               <Location
+                  uuid = "FA331589-3496-4B38-B6EC-EF8052AF91C4 - e09ce7651d6f5b39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.SingleEvent&lt;marvel_project.ComicsModel&gt;) -&gt; () in marvel_project.ComicsViewController.fechComics() -&gt; ()"
+                  moduleName = "marvel-project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gersonr/Desktop/desafio-ios-Gerson-Vieira/marvel-project/marvel-project/View/ComicsViewController/ComicsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

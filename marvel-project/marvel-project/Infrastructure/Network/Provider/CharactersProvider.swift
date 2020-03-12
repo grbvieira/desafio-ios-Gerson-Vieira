@@ -19,7 +19,7 @@ enum Request<T> {
 
 protocol APIProtocol {
     func resquestCharacters(offSet: Int) -> Single<CharactersModel>
-    func requestComics(id: Int) -> Single <ComicsModel>
+    func requestComics(id: Int, offSet: Int) -> Single <ComicsModel>
 }
 
 class MarvelProjectProvider: APIProtocol {
@@ -33,9 +33,9 @@ class MarvelProjectProvider: APIProtocol {
         }
     }
     
-    func requestComics(id: Int) -> Single<ComicsModel> {
+    func requestComics(id: Int, offSet: Int) -> Single<ComicsModel> {
         return provider.rx
-            .request(.comics(id: id))
+            .request(.comics(id: id, offSet: offSet))
             .map {
                 let response = try JSONDecoder().decode(ComicsModel.self, from: $0.data)
                 return response

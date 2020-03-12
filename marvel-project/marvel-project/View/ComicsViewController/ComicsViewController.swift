@@ -51,7 +51,7 @@ class ComicsViewController: BaseViewController {
         comicsResponse = .loading
         isLoading = true
         
-        fetch.requestComics(id: id)
+        fetch.requestComics(id: id, offSet: offSet)
             .subscribe { [weak self] event in
                 guard let self = self else { return }
                 switch event {
