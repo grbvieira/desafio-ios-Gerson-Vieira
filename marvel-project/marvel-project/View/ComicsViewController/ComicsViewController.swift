@@ -15,8 +15,8 @@ class ComicsViewController: BaseViewController {
     
     private var disposeBag: DisposeBag!
     private let fetch = MarvelProjectProvider()
-    private var indicator = UIActivityIndicatorView()
     var viewModel: [ComicsViewModel] = []
+    var load = CustomLoad()
     var comicsResponse: Request<[ComicsModel]> = .none {
         didSet { reloadData() }
     }
@@ -37,7 +37,6 @@ class ComicsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Comics"
-        activityIndicator()
         registerCell()
         fechComics()
     }
@@ -45,14 +44,6 @@ class ComicsViewController: BaseViewController {
     private func registerCell() {
         let cell = UINib(nibName: "ComicsCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "ComicsCell")
-    }
-
-    func activityIndicator() {
-        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        indicator.backgroundColor = .darkGray
-        indicator.style = UIActivityIndicatorView.Style.large
-        indicator.center = self.view.center
-        self.view.addSubview(indicator)
     }
     
     func fechComics() {
@@ -80,15 +71,15 @@ class ComicsViewController: BaseViewController {
     func reloadData() {
         switch comicsResponse {
         case .none: return
-        case .loading: indicator.startAnimating()
+        case .loading: load.showActivityIndicator(uiView: view)
         case .success(let data):
-            indicator.stopAnimating()
+            load.hideActivityIndicator(uiView: view)
             total = data[0].data?.total ?? 0
             let viewModel = FillViewModel().wrapToComicsViewModel(model: data[0])
             self.viewModel.append(contentsOf: viewModel)
             self.tableView.reloadData()
         case .failure(let error):
-            indicator.stopAnimating()
+            load.hideActivityIndicator(uiView: view)
             alert(message: error)
         }
     }
@@ -127,7 +118,7 @@ extension ComicsViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             guard !self.isLoading else { return }
-            if total < offSet {
+            if total > offSet {
                 offSet = offSet + 20
                 fechComics()
             }

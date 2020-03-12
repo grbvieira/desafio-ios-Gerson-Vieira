@@ -15,9 +15,9 @@ class CharactersViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var refreshControl:UIRefreshControl!
-    private var loadingView = UIActivityIndicatorView()
     private var disposeBag: DisposeBag!
     private let fetch = MarvelProjectProvider()
+    var load = CustomLoad()
     var viewModel: [CharactersViewModel] = []
     var charactersResponse: Request<[CharactersModel]> = .none {
         didSet { reloadData() }
@@ -36,18 +36,10 @@ class CharactersViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Characters"
-        activityIndicator()
         registerNibFiles()
         fetchCharacters()
         setupRefresh()
     }
-    
-    func activityIndicator() {
-          loadingView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-          loadingView.style = UIActivityIndicatorView.Style.large
-          loadingView.center = self.view.center
-          self.view.addSubview(loadingView)
-      }
     
     func fetchCharacters() {
         disposeBag = DisposeBag()
@@ -72,15 +64,15 @@ class CharactersViewController: BaseViewController {
         case .none:
             return
         case .loading:
-            loadingView.startAnimating()
+            load.showActivityIndicator(uiView: view)
         case .success(let response):
-            loadingView.stopAnimating()
+            load.hideActivityIndicator(uiView: view)
             let viewModel = FillViewModel().wrapToCharactersViewModel(model: response[0])
             self.viewModel.append(contentsOf: viewModel)
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
         case .failure(let error):
-            loadingView.stopAnimating()
+            load.hideActivityIndicator(uiView: view)
             alert(message: error)
         }
     }

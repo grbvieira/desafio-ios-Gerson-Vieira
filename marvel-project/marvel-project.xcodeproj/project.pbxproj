@@ -26,6 +26,7 @@
 		7524BA3424187ED400DD5AF5 /* WebViewOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7524BA3324187ED400DD5AF5 /* WebViewOptions.xib */; };
 		7524BA3624187EE000DD5AF5 /* WebViewOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA3524187EE000DD5AF5 /* WebViewOptions.swift */; };
 		7524BA392418818A00DD5AF5 /* WebViewOptionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA382418818A00DD5AF5 /* WebViewOptionCoordinator.swift */; };
+		7524BA3B2419C67900DD5AF5 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7524BA3A2419C67900DD5AF5 /* LoadView.swift */; };
 		75770184240F345D003DA971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770183240F345D003DA971 /* AppDelegate.swift */; };
 		75770188240F345D003DA971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75770187240F345D003DA971 /* ViewController.swift */; };
 		7577018B240F345D003DA971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75770189240F345D003DA971 /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		7524BA3324187ED400DD5AF5 /* WebViewOptions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewOptions.xib; sourceTree = "<group>"; };
 		7524BA3524187EE000DD5AF5 /* WebViewOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewOptions.swift; sourceTree = "<group>"; };
 		7524BA382418818A00DD5AF5 /* WebViewOptionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewOptionCoordinator.swift; sourceTree = "<group>"; };
+		7524BA3A2419C67900DD5AF5 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		75770180240F345D003DA971 /* marvel-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75770183240F345D003DA971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75770187240F345D003DA971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				7524BA212417E4D800DD5AF5 /* DateFormatter.swift */,
+				7524BA3A2419C67900DD5AF5 /* LoadView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				7524BA3624187EE000DD5AF5 /* WebViewOptions.swift in Sources */,
 				757701EF24171B7F003DA971 /* ComicsModel.swift in Sources */,
 				757701F1241726FC003DA971 /* FillViewModel.swift in Sources */,
+				7524BA3B2419C67900DD5AF5 /* LoadView.swift in Sources */,
 				7524BA392418818A00DD5AF5 /* WebViewOptionCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
