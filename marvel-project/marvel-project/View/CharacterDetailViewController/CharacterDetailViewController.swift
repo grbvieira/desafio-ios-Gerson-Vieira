@@ -40,6 +40,7 @@ class CharacterDetailViewController: BaseViewController, CharacterDetailDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Characters Detail"
         setupStack()
         setupUI()
     }

@@ -11,8 +11,11 @@ import RxCocoa
 
 class CharactersViewController: BaseViewController {
     
+    @IBOutlet weak var mainStack: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     private var refreshControl:UIRefreshControl!
+    private var loadingView = UIActivityIndicatorView()
     private var disposeBag: DisposeBag!
     private let fetch = MarvelProjectProvider()
     var viewModel: [CharactersViewModel] = []
@@ -32,10 +35,19 @@ class CharactersViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Characters"
+        activityIndicator()
         registerNibFiles()
         fetchCharacters()
         setupRefresh()
     }
+    
+    func activityIndicator() {
+          loadingView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+          loadingView.style = UIActivityIndicatorView.Style.large
+          loadingView.center = self.view.center
+          self.view.addSubview(loadingView)
+      }
     
     func fetchCharacters() {
         disposeBag = DisposeBag()
@@ -60,13 +72,15 @@ class CharactersViewController: BaseViewController {
         case .none:
             return
         case .loading:
-            return
+            loadingView.startAnimating()
         case .success(let response):
+            loadingView.stopAnimating()
             let viewModel = FillViewModel().wrapToCharactersViewModel(model: response[0])
             self.viewModel.append(contentsOf: viewModel)
             self.collectionView.reloadData()
             self.refreshControl.endRefreshing()
         case .failure(let error):
+            loadingView.stopAnimating()
             alert(message: error)
         }
     }
@@ -82,7 +96,6 @@ class CharactersViewController: BaseViewController {
         let cell = UINib(nibName: "CharactersCell", bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: "charactersCell")
     }
-    
 }
 
 extension CharactersViewController:  UICollectionViewDataSource, UICollectionViewDelegate {
@@ -113,7 +126,6 @@ extension CharactersViewController {
     
     func setupRefresh() {
         self.refreshControl = UIRefreshControl()
-        //self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: #selector(CharactersViewController.refresh), for: .valueChanged)
         collectionView!.addSubview(refreshControl)
     }

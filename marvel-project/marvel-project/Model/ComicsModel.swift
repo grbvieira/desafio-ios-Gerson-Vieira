@@ -99,16 +99,12 @@ enum ModifiedEnum: String, Codable {
 // MARK: - Thumbnail
 struct ThumbnailComics: Codable {
     let path: String
-    let thumbnailExtension: ExtensionComics
+    let thumbnailExtension: Extension
     
     enum CodingKeys: String, CodingKey {
         case path
         case thumbnailExtension = "extension"
     }
-}
-
-enum ExtensionComics: String, Codable {
-    case jpg = "jpg"
 }
 
 // MARK: - Price

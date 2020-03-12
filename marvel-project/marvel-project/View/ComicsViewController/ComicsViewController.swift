@@ -13,16 +13,17 @@ class ComicsViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var refreshControl:UIRefreshControl!
     private var disposeBag: DisposeBag!
     private let fetch = MarvelProjectProvider()
+    private var indicator = UIActivityIndicatorView()
     var viewModel: [ComicsViewModel] = []
     var comicsResponse: Request<[ComicsModel]> = .none {
         didSet { reloadData() }
     }
     var isLoading: Bool = false
-    
+    var offSet = 20
     var id = 0
+    var total = 0
     
     required init(id: Int) {
         super.init(nibName: "ComicsViewController", bundle: nil)
@@ -35,6 +36,8 @@ class ComicsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Comics"
+        activityIndicator()
         registerCell()
         fechComics()
     }
@@ -42,6 +45,14 @@ class ComicsViewController: BaseViewController {
     private func registerCell() {
         let cell = UINib(nibName: "ComicsCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "ComicsCell")
+    }
+
+    func activityIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        indicator.backgroundColor = .darkGray
+        indicator.style = UIActivityIndicatorView.Style.large
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
     }
     
     func fechComics() {
@@ -69,13 +80,15 @@ class ComicsViewController: BaseViewController {
     func reloadData() {
         switch comicsResponse {
         case .none: return
-        case .loading: return
+        case .loading: indicator.startAnimating()
         case .success(let data):
-           // self.refreshControl.endRefreshing()
+            indicator.stopAnimating()
+            total = data[0].data?.total ?? 0
             let viewModel = FillViewModel().wrapToComicsViewModel(model: data[0])
             self.viewModel.append(contentsOf: viewModel)
             self.tableView.reloadData()
         case .failure(let error):
+            indicator.stopAnimating()
             alert(message: error)
         }
     }
@@ -83,10 +96,9 @@ class ComicsViewController: BaseViewController {
     private func alert(message: String) {
         let alert = UIAlertController(title: "Alert", message: "Error: \(message)",
             preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
-        //        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { alert in
-        //            self.navigationController?.dismiss(animated: true, completion: nil)
-        //        }))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { alert in
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -112,25 +124,13 @@ extension ComicsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ComicsViewController {
     
-    func setupRefresh() {
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: #selector(ComicsViewController.refresh), for: .valueChanged)
-        self.tableView.addSubview(refreshControl)
-    }
-    
-    @objc private func refresh(sender:AnyObject)
-    {
-        //fetchCharacters()
-        fechComics()
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             guard !self.isLoading else { return }
-            // offSet = offSet + 20
-            //fetchCharacters()
-            
+            if total < offSet {
+                offSet = offSet + 20
+                fechComics()
+            }
         }
     }
 }
-

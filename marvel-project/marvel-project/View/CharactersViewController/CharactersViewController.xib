@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharactersViewController" customModule="marvel_project" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="5Bf-Ok-LkI" id="2ER-fj-lWR"/>
+                <outlet property="mainStack" destination="2tN-BG-jyj" id="8ji-Sz-SKO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rad-d6-00l"/>
             </connections>
         </placeholder>
@@ -18,26 +19,31 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5Bf-Ok-LkI">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2tN-BG-jyj">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2YF-eg-dYM">
-                        <size key="itemSize" width="120" height="220"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="c4F-Wr-eDp"/>
-                        <outlet property="delegate" destination="-1" id="T01-NH-7RH"/>
-                    </connections>
-                </collectionView>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5Bf-Ok-LkI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2YF-eg-dYM">
+                                <size key="itemSize" width="120" height="220"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="c4F-Wr-eDp"/>
+                                <outlet property="delegate" destination="-1" id="T01-NH-7RH"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                </stackView>
             </subviews>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Bf-Ok-LkI" secondAttribute="trailing" id="44E-Nb-8XV"/>
-                <constraint firstItem="5Bf-Ok-LkI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DxX-Mi-U4U"/>
-                <constraint firstItem="5Bf-Ok-LkI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IDk-2R-4hc"/>
-                <constraint firstAttribute="bottom" secondItem="5Bf-Ok-LkI" secondAttribute="bottom" id="abq-Vj-wRD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2tN-BG-jyj" secondAttribute="trailing" id="BZQ-oG-iWP"/>
+                <constraint firstAttribute="bottom" secondItem="2tN-BG-jyj" secondAttribute="bottom" id="C9I-k0-QMC"/>
+                <constraint firstItem="2tN-BG-jyj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dqm-qj-ar9"/>
+                <constraint firstItem="2tN-BG-jyj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lvV-1R-nbb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>

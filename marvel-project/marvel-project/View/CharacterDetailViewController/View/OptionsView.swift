@@ -22,7 +22,7 @@ class OptionsView: NibView {
         switch type {
         case .comics:
             optionLabel.setTitle("Comics", for: .normal)
-            optionLabel.setTitleColor(UIColor.black, for: .normal)
+            optionLabel.setTitleColor(UIColor.gray, for: .normal)
         case .detail:
             optionLabel.setTitle("Detail", for: .normal)
             optionLabel.setTitleColor(UIColor.link, for: .normal)

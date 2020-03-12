@@ -22,27 +22,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cp-pa-mEz">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cp-pa-mEz">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="26"/>
                     <state key="normal" title="Comics">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </state>
                     <connections>
                         <action selector="choiceAction:" destination="-1" eventType="touchUpInside" id="wwk-LV-qDw"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="4cp-pa-mEz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1MX-Zi-7RG"/>
-                <constraint firstItem="4cp-pa-mEz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ITF-HF-4gL"/>
-                <constraint firstItem="4cp-pa-mEz" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ml1-xm-dXi"/>
-                <constraint firstItem="4cp-pa-mEz" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vIc-9o-LHZ"/>
-            </constraints>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="-139.62053571428569"/>
+            <point key="canvasLocation" x="138" y="-148"/>
         </view>
     </objects>
 </document>
